@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Data Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Database Data</h1>
+    <div id="tables-container"></div>
+
+    <script>
+        // Function to create and display tables
+        function displayData(data) {
+            const container = document.getElementById('tables-container');
+            container.innerHTML = ''; // Clear the container before adding new tables
+
+            for (const [key, values] of Object.entries(data)) {
+                // Create table for each key
+                const table = document.createElement('table');
+                const caption = document.createElement('caption');
+                caption.textContent = key;
+                table.appendChild(caption);
+
+                // Create table header
+                const headerRow = document.createElement('tr');
+                for (const column in values[0]) {
+                    const th = document.createElement('th');
+                    th.textContent = column;
+                    headerRow.appendChild(th);
+                }
+                table.appendChild(headerRow);
+
+                // Add rows to the table
+                values.forEach(row => {
+                    const tableRow = document.createElement('tr');
+                    for (const value of Object.values(row)) {
+                        const td = document.createElement('td');
+                        td.textContent = value;
+                        tableRow.appendChild(td);
+                    }
+                    table.appendChild(tableRow);
+                });
+
+                container.appendChild(table);
+            }
+        }
+
+        // Fetch JSON data from a file
+        function fetchJSONData() {
+            fetch('data.json') // Replace 'data.json' with the path to your JSON file
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayData(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching the JSON data:', error);
+                });
+        }
+
+        // Call the fetchJSONData function when the page loads
+        document.addEventListener('DOMContentLoaded', fetchJSONData);
+    </script>
+</body>
+</html>

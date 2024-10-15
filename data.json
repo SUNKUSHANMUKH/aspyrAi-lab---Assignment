@@ -1,0 +1,71 @@
+{
+    "SYS_State": [
+        {
+            "Stt_ID": 1,
+            "Stt_Name": "California",
+            "Stt_Code": "CA"
+        },
+        {
+            "Stt_ID": 2,
+            "Stt_Name": "Texas",
+            "Stt_Code": "TX"
+        },
+        {
+            "Stt_ID": 3,
+            "Stt_Name": "New York",
+            "Stt_Code": "NY"
+        }
+    ],
+    "OPT_Party": [
+        {
+            "PTY_ID": 1,
+            "PTY_FirstName": "John",
+            "PTY_LastName": "Doe",
+            "PTY_Phone": "123-456-7890",
+            "PTY_SSN": "111-22-3333"
+        },
+        {
+            "PTY_ID": 2,
+            "PTY_FirstName": "Jane",
+            "PTY_LastName": "Smith",
+            "PTY_Phone": "234-567-8901",
+            "PTY_SSN": "222-33-4444"
+        },
+        {
+            "PTY_ID": 3,
+            "PTY_FirstName": "Emily",
+            "PTY_LastName": "Johnson",
+            "PTY_Phone": "345-678-9012",
+            "PTY_SSN": "333-44-5555"
+        }
+    ],
+    "OPT_Address": [
+        {
+            "Add_ID": 1,
+            "Add_Line1": "123 Main St",
+            "Add_Line2": "",
+            "Add_City": "Los Angeles",
+            "Add_State": 1,
+            "Add_Zip": "90001",
+            "Add_PartyID": 1
+        },
+        {
+            "Add_ID": 2,
+            "Add_Line1": "456 Elm St",
+            "Add_Line2": "Apt 3",
+            "Add_City": "Houston",
+            "Add_State": 2,
+            "Add_Zip": "77001",
+            "Add_PartyID": 2
+        },
+        {
+            "Add_ID": 3,
+            "Add_Line1": "789 Maple Ave",
+            "Add_Line2": "Suite 100",
+            "Add_City": "New York",
+            "Add_State": 3,
+            "Add_Zip": "10001",
+            "Add_PartyID": 3
+        }
+    ]
+}
