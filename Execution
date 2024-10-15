@@ -1,0 +1,11 @@
+THE PROCESS OF EXCECUTION IS CAN BE EXPLAINED IN THE FOLLOWING STEPS.
+        To obtain the process the divided into differnt categories.
+                the process are: 
+                     1. connect the script (code) to the local host using the root---> those the user cerenditals.
+                     2. if successfully connected then you can see in the screen and you can see the data are driven from the tables.
+                     3. then the data is organized in the dictionary, then it is converted into  JSON fromat  and writes the JSOn structure in the .json(Extention).
+                     4. if any errors occures then you can see in the screen about the errors.
+                     5. Finally, it closes the database connection and cursor to ensure no lingering connections.
+
+                     
+The resulting data.json file will contain the fetched data from the three tables in a structured JSON format, making it easy to use or share further.
