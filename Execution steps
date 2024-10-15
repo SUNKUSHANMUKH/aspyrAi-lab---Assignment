@@ -1,10 +1,10 @@
-THE PROCESS OF EXCECUTION IS CAN BE EXPLAINED IN THE FOLLOWING STEPS.
-        To obtain the process the divided into differnt categories.
-                the process are: 
+THE PROCESS OF EXECUTION CAN BE EXPLAINED IN THE FOLLOWING STEPS.
+        To obtain the process they divided into different categories.
+                the process is: 
                      1. connect the script (code) to the local host using the root---> those the user cerenditals.
                      2. if successfully connected then you can see in the screen and you can see the data are driven from the tables.
-                     3. then the data is organized in the dictionary, then it is converted into  JSON fromat  and writes the JSOn structure in the .json(Extention).
-                     4. if any errors occures then you can see in the screen about the errors.
+                     3. Then, the data is organized in the dictionary and converted into JSON format, and the JSON structure is written in the .json(Extention).
+                     4. if any errors occur then you can see on the screen about the errors.
                      5. Finally, it closes the database connection and cursor to ensure no lingering connections.
 
                      
